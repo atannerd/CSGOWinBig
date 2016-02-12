@@ -27,7 +27,7 @@ $stmt->bindValue(':desc', $desc);
 $stmt->execute();
 
 # Send email to our email
-$to = 'support@csgowinbig.com';
+$to = 'support@csgoburnout.com';
 $subject = 'Support Ticket Submitted';
 $message = "A support ticket has been sent.\n\nName: $name\nEmail: $email\nProfile link: $steamProfileLink\nDescription: $desc";
 mail($to, $subject, $message);
@@ -48,7 +48,7 @@ $message =
 	You can expect an email response about this issue within the next 24 to 48 hours.";
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
-$headers .= "From: CSGO Win Big <jordantu@box1220.bluehost.com>";
+$headers .= "From: CSGO Burnout <support@csgoburnout.com>";
 mail($email, $subject, $message, $headers);
 
 echo jsonSuccess(array('message' => 'Your support ticket was submitted successfully! Check your email for a confirmation.'));

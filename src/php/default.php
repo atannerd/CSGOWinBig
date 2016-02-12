@@ -1,13 +1,12 @@
 <?php
-# Copyright (c) 2015 Jordan Turley, CSGO Win Big. All Rights Reserved.
 
 function getDB() {
 	$dbHost = 'localhost';
-	$db     = 'csgowinb_default';
-	$dbUser = 'csgowinb_ztizzle';
+	$db     = 'csgowinbig';
+	$dbUser = 'root';
 
 	# Get database password from outside of web root
-	$fileLoc = $_SERVER['DOCUMENT_ROOT'] . '/../passwords.txt';
+	$fileLoc = $_SERVER['DOCUMENT_ROOT'] . '/passwords.txt';
 	if (file_exists($fileLoc)) {
 		$fh = fopen($fileLoc, 'r');
 		$jsonStr = fgets($fh);
@@ -48,7 +47,7 @@ function jsonErr($errMsg) {
 }
 
 function getSteamAPIKey() {
-	$fileLoc = $_SERVER['DOCUMENT_ROOT'] . '/../passwords.txt';
+	$fileLoc = $_SERVER['DOCUMENT_ROOT'] . '/passwords.txt';
 	if (file_exists($fileLoc)) {
 		$fh = fopen($fileLoc, 'r');
 		$jsonStr = fgets($fh);
@@ -81,7 +80,6 @@ function getVar($varName) {
 	}
 }
 
-# Thanks to TheAnthonyNL on Github for this function
 function steamid32ToSteamid64($steamid32) {
     $iServer = "0";
     $iAuthID = "0";

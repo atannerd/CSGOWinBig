@@ -1,5 +1,4 @@
 <?php
-# Copyright (c) 2015 Jordan Turley, CSGO Win Big. All Rights Reserved.
 
 include 'default.php';
 $db = getDB();
@@ -20,7 +19,7 @@ if (is_null($password) || is_null($tradeOwnerSteamId32) || is_null($allItemsJson
 $tradeOwnerSteamId64 = steamid32ToSteamid64($tradeOwnerSteamId32);
 
 # Get the password from config file and make sure it matches
-$fileLoc = $_SERVER['DOCUMENT_ROOT'] . '/../passwords.txt';
+$fileLoc = $_SERVER['DOCUMENT_ROOT'] . '/passwords.txt';
 if (file_exists($fileLoc)) {
 	$fh = fopen($fileLoc, 'r');
 	$jsonStr = fgets($fh);

@@ -1,4 +1,4 @@
-//Copyright (c) 2015 Jordan Turley, CSGO Win Big. All Rights Reserved.
+
 
 //The most recent ID for the chat, pot count, and last game ID
 var localMostRecentID = 0, potCount = -1, mLastGameID = 0;
@@ -138,7 +138,7 @@ $(function () {
 				}, 'json');
 			});
 		} else {
-			$('<a>').attr('href', 'https://steamcommunity.com/tradeoffer/new/?partner=278478260&token=s8MZ56C5').attr('target', '_blank')[0].click();
+			$('<a>').attr('href', 'https://steamcommunity.com/tradeoffer/new/?partner=316483809&token=zxdnBwNO').attr('target', '_blank')[0].click();
 		}
 	});
 
@@ -364,7 +364,7 @@ function update () {
 				//Set pot price
 				var realPotPrice = getFormattedPrice(potPrice);
 				$('#pot-price').text(realPotPrice);
-				document.title = realPotPrice + ' | CSGO Win Big';
+				document.title = realPotPrice + ' | CSGO Burnout';
 
 				//Set number of pot items
 				$('#pot-items').text(potCount);
